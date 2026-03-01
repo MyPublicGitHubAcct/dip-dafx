@@ -32,8 +32,7 @@ def plot_fft_mag_phs(signal,
     fig, (ax1, ax2) = plt.subplots(2)
     df = fs / fft_size  # frequency resolution
     x_fft = 1 / fft_size * fftshift(fft(signal, fft_size))  # fft of the signal
-    sample_index = np.arange(-fft_size // 2, fft_size // 2)  # raw index for
-    # FFT plot
+    sample_index = np.arange(-fft_size // 2, fft_size // 2)  # raw index for FFT plot
     xf = sample_index * df  # x-axis converted to freq
     phase = np.arctan2(np.imag(x_fft), np.real(x_fft)) * 180 / np.pi
     ax1.set_title(axis_one_title)
