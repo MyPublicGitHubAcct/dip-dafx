@@ -4,14 +4,14 @@ from fx_gain import gain
 Tests a gain calculation (simple multiplication).
 
 To run all tests, type pytest at top level like:
-    (venv) ➜  AnoRack git:(main) ✗ pytest
+    pytest
 
 To run only the tests in this file, do this:
-    (venv) ➜  AnoRack git:(main) ✗ pytest -q python/test_gain.py
+    pytest -q test_fx_gain.py
 """
 
 
-class TestGain:
+class TestSimpleGain:
 
     def test_gain_one(self):
         res = gain(0.4, 0.7)

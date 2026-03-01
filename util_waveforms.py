@@ -11,24 +11,21 @@ from scipy import signal
 #####################################################
 
 
-def wv_sine(fs, t, freq):
+def wv_sine(num_samples, freq):
     # an array of values representing a sine wave
-    samples = np.arange(t * fs) / fs
-    out = np.sin(2 * np.pi * freq * samples)
+    out = np.sin(2 * np.pi * freq * num_samples)
     return out
 
 
-def wv_cosine(fs, t, freq):
+def wv_cosine(num_samples, freq):
     # an array of values representing a cosine wave
-    samples = np.arange(t * fs) / fs
-    out = np.cos(2 * np.pi * freq * samples)
+    out = np.cos(2 * np.pi * freq * num_samples)
     return out
 
 
-def wv_sawtooth(fs, t, freq):
+def wv_sawtooth(num_samples, freq):
     # an array of values representing a sawtooth wave
-    samples = np.arange(t * fs) / fs
-    out = signal.sawtooth(2 * np.pi * freq * samples)
+    out = signal.sawtooth(2 * np.pi * freq * num_samples)
     return out
 
 

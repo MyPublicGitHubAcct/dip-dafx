@@ -3,7 +3,7 @@ from scipy.fft import fft, ifft, fftfreq, fftshift
 import matplotlib.pyplot as plt
 
 
-def plot_waveform(title, x_label, y_label, x, y):
+def plot_single_waveform(title, x_label, y_label, t, X):
     '''
     Call like
         plot_waveform('My Title', 'my x label', 'my y label', t, X)
@@ -12,7 +12,7 @@ def plot_waveform(title, x_label, y_label, x, y):
     ax1.set_title(title)
     ax1.set_xlabel(x_label)
     ax1.set_ylabel(y_label)
-    ax1.plot(x, y)
+    ax1.plot(t, X)
     plt.tight_layout()
     plt.show()
 
